@@ -48,6 +48,250 @@ h1, h2, h3, h4, h5, h6 {
 
 /** Your CSS Below **/
 
+/* Container */
+.container {
+  background-color: hsl(30, 54%, 90%);
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 123px 20px;
+}
+
+/* Recipe Card */
+.recipe-card {
+  background-color: hsl(0, 0%, 100%);
+  max-width: 736px;
+  width: 100%;
+  border-radius: 24px;
+  padding: 40px;
+}
+
+/* Recipe Image */
+.recipe-image {
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+  margin-bottom: 40px;
+}
+
+/* Recipe Header */
+.recipe-header h1 {
+  font-family: 'Young Serif', serif;
+  font-size: 36px;
+  font-weight: 400;
+  color: hsl(24, 5%, 18%);
+  margin-bottom: 24px;
+  line-height: 1;
+}
+
+.recipe-description {
+  font-family: 'Outfit', sans-serif;
+  font-size: 16px;
+  color: hsl(30, 10%, 34%);
+  line-height: 1.5;
+  margin-bottom: 32px;
+}
+
+/* Preparation Time Box */
+.prep-time {
+  background-color: hsl(330, 100%, 98%);
+  padding: 24px;
+  border-radius: 12px;
+  margin-bottom: 32px;
+}
+
+.prep-time h3 {
+  font-family: 'Outfit', sans-serif;
+  font-size: 20px;
+  color: hsl(332, 51%, 32%);
+  margin-bottom: 12px;
+  font-weight: 600;
+}
+
+.prep-time ul {
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
+}
+
+.prep-time li {
+  font-family: 'Outfit', sans-serif;
+  font-size: 16px;
+  color: hsl(30, 10%, 34%);
+  padding-left: 28px;
+  margin-bottom: 8px;
+  position: relative;
+  line-height: 1.5;
+}
+
+.prep-time li:last-child {
+  margin-bottom: 0;
+}
+
+.prep-time li::before {
+  content: "•";
+  color: hsl(332, 51%, 32%);
+  font-weight: bold;
+  position: absolute;
+  left: 8px;
+  font-size: 20px;
+  line-height: 1.5;
+}
+
+.prep-time strong {
+  font-weight: 700;
+}
+
+/* Section Headings */
+section h2 {
+  font-family: 'Young Serif', serif;
+  font-size: 28px;
+  font-weight: 400;
+  color: hsl(14, 45%, 36%);
+  margin-bottom: 20px;
+}
+
+/* Ingredients */
+.ingredients {
+  margin-bottom: 32px;
+}
+
+.ingredients ul {
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
+}
+
+.ingredients li {
+  font-family: 'Outfit', sans-serif;
+  font-size: 16px;
+  color: hsl(30, 10%, 34%);
+  padding-left: 28px;
+  margin-bottom: 8px;
+  position: relative;
+  line-height: 1.5;
+}
+
+.ingredients li:last-child {
+  margin-bottom: 0;
+}
+
+.ingredients li::before {
+  content: "•";
+  color: hsl(14, 45%, 36%);
+  font-weight: bold;
+  position: absolute;
+  left: 8px;
+  font-size: 20px;
+  line-height: 1.5;
+}
+
+/* Divider */
+hr {
+  border: none;
+  border-top: 1px solid hsl(30, 18%, 87%);
+  margin: 32px 0;
+}
+
+/* Instructions */
+.instructions {
+  margin-bottom: 32px;
+}
+
+.instructions ol {
+  list-style: none;
+  counter-reset: step-counter;
+  padding-left: 0;
+  margin: 0;
+}
+
+.instructions li {
+  font-family: 'Outfit', sans-serif;
+  font-size: 16px;
+  color: hsl(30, 10%, 34%);
+  padding-left: 28px;
+  margin-bottom: 8px;
+  position: relative;
+  counter-increment: step-counter;
+  line-height: 1.5;
+}
+
+.instructions li:last-child {
+  margin-bottom: 0;
+}
+
+.instructions li::before {
+  content: counter(step-counter) ".";
+  color: hsl(14, 45%, 36%);
+  font-weight: 700;
+  position: absolute;
+  left: 0;
+  font-size: 16px;
+}
+
+.instructions strong {
+  font-weight: 700;
+}
+
+/* Nutrition */
+.nutrition {
+  margin-bottom: 0;
+}
+
+.nutrition-description {
+  font-family: 'Outfit', sans-serif;
+  font-size: 16px;
+  color: hsl(30, 10%, 34%);
+  line-height: 1.5;
+  margin-bottom: 20px;
+}
+
+.nutrition table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.nutrition tr {
+  border-bottom: 1px solid hsl(30, 18%, 87%);
+}
+
+.nutrition tr:last-child {
+  border-bottom: none;
+}
+
+.nutrition td {
+  font-family: 'Outfit', sans-serif;
+  font-size: 16px;
+  padding: 12px 0;
+}
+
+.nutrition td:first-child {
+  color: hsl(30, 10%, 34%);
+  padding-left: 32px;
+  width: 50%;
+}
+
+.nutrition td:last-child {
+  color: hsl(14, 45%, 36%);
+  font-weight: 700;
+  padding-left: 16px;
+}
+
 /** Attribution CSS **/
-.attribution { font-size: 11px; text-align: center; }
-.attribution a { color: hsl(228, 45%, 44%); }
+.attribution { 
+  font-size: 11px; 
+  text-align: center;
+  padding: 20px;
+  font-family: 'Outfit', sans-serif;
+  color: hsl(30, 10%, 34%);
+}
+
+.attribution a { 
+  color: hsl(228, 45%, 44%); 
+  text-decoration: none;
+}
+
+.attribution a:hover {
+  text-decoration: underline;
+}
